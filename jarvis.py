@@ -5,24 +5,7 @@ import webbrowser
 import os
 import wikipedia
 
-opts = {
-    "alias": ("jarvis","jarvi","jar","jarry","jary","jarviz","yaris"),
-    "tbr": ("say","tell","ask","open","find"),
-    "cmds": {
-        "translate": ("translate","trenslate"),
-        "hello": ("hi jarvis","hello jarvis"),
-        "website": ("open website","go to website"),
-        "news": ("armenian news","say news"),
-        "stop": ("stop","top","op","exit","pop","bye"),
-        "truck": ("find a truck","truck please"),
-        "about": ("what can you say about you","say something about you","tell me about you","tell abut you"),
-        "name": ("what is your name"),
-        "resturants": ("resturants","res","returant","restoran","restur","turant"),
-        "draw": ("draw tree","03","tree","adultery","duro tree","draw tain","drone frame"),
-        "one minute": ("one minute","1 minute","1 minutes")
-        
-    } 
-}
+
 
 def talk(words):
     engine = pyttsx3.init()
@@ -65,9 +48,6 @@ def working(task):
         talk("My name is Jarvis")
     elif "about" in task:
         os.system("JARVIS.mp4")
-    elif "truck" in task:
-        talk("one minute mr. arsen")
-        webbrowser.open("https://power.dat.com/login?returnUrl=/")
     elif "translate" in task:
         b = task
         a = b.split(" ",1)[-1]
@@ -94,8 +74,7 @@ def working(task):
     elif "turn off computer" in task:
         talk("Ok ser computer shutting down")
         os.system("shutdown /p")
-    elif "motor program" in task:
-        os.system("Arduino_Motor.py")
+
 
 while True:
     working(command())
