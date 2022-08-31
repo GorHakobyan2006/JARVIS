@@ -59,9 +59,6 @@ for text in listen():
         talk("My name is Jarvis")
     elif "about" in text:
         os.system("JARVIS.mp4")
-    elif "truck" in text:
-        talk("one minute mr. arsen")
-        webbrowser.open("https://power.dat.com/login?returnUrl=/")
     elif "translate" in text:
         b = text
         a = b.split(" ",1)[-1]
@@ -88,6 +85,5 @@ for text in listen():
     elif "turn off" in text:
         talk("Ok ser computer shutting down")
         os.system("shutdown /p")
-    elif "motor program" in text:
-        os.system("Arduino_light_us.py")
+
     
